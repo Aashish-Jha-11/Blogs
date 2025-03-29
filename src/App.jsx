@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import BlogList from './components/BlogList';
 import BlogDetail from './components/BlogDetail';
@@ -8,7 +8,7 @@ import { BlogProvider } from './context/BlogContext';
 function App() {
   return (
     <BlogProvider>
-      <Router>
+      <HashRouter>
         <div className="app">
           <Navbar />
           <Routes>
@@ -17,7 +17,7 @@ function App() {
             <Route path="/login" element={<Login />} />
           </Routes>
         </div>
-      </Router>
+      </HashRouter>
     </BlogProvider>
   );
 }
